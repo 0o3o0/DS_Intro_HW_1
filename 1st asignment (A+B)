@@ -1,0 +1,39 @@
+# developed by Jezy Mirson-Ohana 314470287
+
+# A
+def my_func(x1, x2, x3):
+    # 1st option, correct parameters + negative or positive result
+    if (type(x1) == float) and (type(x2) == float) and (type(x3) and float) and (x1+x2+x3) != 0.0:
+        return (((x1+x2+x3)*(x2+x3)*x3)/(x1+x2+x3))
+    # 2nd option, one of the parameteres aren't a float type
+    elif ((type(x1) != float) or (type(x2) != float) or (type(x3) != float)):
+        return('Error: parameters should be float')
+    # 3rd option, the denominator is equal to zero
+    elif (x1+x2+x3) == 0.0:
+        return ('Not a number – denominator equals zero')
+
+
+# testing the function
+print(my_func(1.0, 2.0, 3.0))
+print(my_func('aba', 2.0, 3.0))
+print(my_func(1.0, 0.0, -1.0))
+
+# B
+
+
+def convert(hours, minutes):
+    if hours >= 0 and minutes >= 0:
+        if type(hours) != int:
+            hours = hours*60
+            return (hours*60+minutes*60)
+        else:
+            return (hours*60*60+minutes*60)
+    else:
+        return ("Input error!")
+
+
+# testing the function
+print(convert(1, 3))
+print(convert(1, 45))
+print(convert(1.75, 0))
+print(convert(-2, 0))
